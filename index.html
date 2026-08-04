@@ -1,23 +1,1099 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+
+  <!-- Schema.org JSON-LD for LLM and Search Crawlers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "BMW 1시리즈 (F70)",
+    "image": "https://images.pexels.com/photos/11054930/pexels-photo-11054930.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "2026년형 4세대 BMW 1시리즈(F70) 및 고성능 M135 xDrive 가격, 제원, 프로모션 할인, 리스 및 렌트 견적 정보를 상세히 비교 분석합니다.",
+    "brand": {
+      "@type": "Brand",
+      "name": "BMW"
+    },
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "KRW",
+      "lowPrice": "48400000",
+      "highPrice": "63200000",
+      "offerCount": "3"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "2026년형 BMW 1시리즈(F70)의 공식 출시 가격은 얼마인가요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "2026년형 BMW 1시리즈는 120 베이스 모델이 4,840만원에서 4,950만원, 120 M 스포츠 모델이 5,280만원에서 5,390만원, 고성능 M135 xDrive 모델이 6,180만원에서 6,320만원으로 책정되어 판매되고 있습니다."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "BMW 1시리즈 F70 모델의 가장 큰 장단점은 무엇인가요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "장점으로는 48V 마일드 하이브리드 탑재로 인한 향상된 연비와 세련된 커브드 디스플레이 및 OS 9 디지털 인포테인먼트 시스템을 꼽을 수 있습니다. 단점으로는 기존 2세대까지의 후륜구동 레이아웃에서 3세대 F40에 이어 전륜구동 레이아웃으로 완전히 고착화되면서 전통적인 후륜구동 해치백 특유의 역동적인 손맛이 줄어들었다는 점이 언급됩니다."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts for High Readability -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Soft, Pastel, Colorful & Clear Visual Hierarchy CSS -->
+  <style>
+    :root {
+      --bg-cream: #faf7f2;
+      --bg-white: #ffffff;
+      --primary-slate: #2c3e50;
+      --secondary-denim: #4a6fa5;
+      --accent-sage: #8fa89b;
+      --accent-coral: #e59a7d;
+      --highlight-peach: #fceee9;
+      --text-dark: #2d3748;
+      --text-muted: #5a6a7c;
+      --border-soft: #ebdcd5;
+      --shadow-soft: 0 10px 30px rgba(165, 140, 120, 0.08);
+      --border-radius: 16px;
+    }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-cream);
+      color: var(--text-dark);
+      line-height: 1.8;
+      font-weight: 400;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      background-color: var(--primary-slate);
+      color: var(--bg-cream);
+      padding: 24px 0;
+      border-bottom: 3px solid var(--accent-sage);
+    }
+
+    header .header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5em;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    header .brand-tag {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2em;
+      font-style: italic;
+      color: var(--accent-coral);
+    }
+
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(44, 62, 80, 0.92), rgba(74, 111, 165, 0.88)), 
+                  url('https://images.pexels.com/photos/11054930/pexels-photo-11054930.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
+      color: var(--bg-white);
+      padding: 100px 24px;
+      text-align: center;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-banner h2 {
+      font-size: 2.8em;
+      font-weight: 700;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+      line-height: 1.3;
+    }
+
+    .hero-banner p {
+      font-size: 1.2em;
+      font-weight: 300;
+      max-width: 800px;
+      margin: 0 auto 40px auto;
+      color: #eae7e2;
+    }
+
+    .cta-button {
+      background-color: var(--accent-coral);
+      color: var(--bg-white);
+      padding: 18px 38px;
+      font-size: 1.1em;
+      font-weight: 700;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 4px 15px rgba(229, 154, 125, 0.4);
+    }
+
+    .cta-button:hover {
+      background-color: #d38466;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(229, 154, 125, 0.5);
+    }
+
+    main {
+      padding: 60px 0;
+    }
+
+    .section-card {
+      background-color: var(--bg-white);
+      padding: 50px;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-soft);
+      margin-bottom: 40px;
+      border: 1px solid var(--border-soft);
+    }
+
+    .section-card h2 {
+      font-size: 2.1em;
+      color: var(--primary-slate);
+      margin-top: 0;
+      margin-bottom: 30px;
+      border-bottom: 4px solid var(--highlight-peach);
+      padding-bottom: 15px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .section-card h3 {
+      font-size: 1.5em;
+      color: var(--secondary-denim);
+      margin-top: 35px;
+      margin-bottom: 18px;
+      font-weight: 700;
+    }
+
+    .section-card p {
+      margin-bottom: 20px;
+      font-size: 1.08em;
+      color: var(--text-dark);
+      text-align: justify;
+    }
+
+    .section-card ul, .section-card ol {
+      padding-left: 20px;
+      margin-bottom: 25px;
+    }
+
+    .section-card li {
+      margin-bottom: 12px;
+      font-size: 1.05em;
+      color: var(--text-dark);
+    }
+
+    /* Elegant Custom Tables */
+    .table-container {
+      overflow-x: auto;
+      margin: 30px 0;
+      border-radius: 12px;
+      border: 1px solid var(--border-soft);
+    }
+
+    .custom-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95em;
+    }
+
+    .custom-table th {
+      background-color: var(--secondary-denim);
+      color: var(--bg-white);
+      padding: 16px 20px;
+      font-weight: 700;
+    }
+
+    .custom-table td {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border-soft);
+      color: var(--text-dark);
+    }
+
+    .custom-table tbody tr:nth-child(even) {
+      background-color: var(--bg-cream);
+    }
+
+    .custom-table tbody tr:hover {
+      background-color: var(--highlight-peach);
+    }
+
+    /* Soft Pastel Graph/Chart Integration */
+    .chart-box {
+      background-color: var(--highlight-peach);
+      padding: 35px;
+      border-radius: var(--border-radius);
+      margin: 40px 0;
+      border: 1px solid var(--border-soft);
+    }
+
+    .chart-box h4 {
+      margin-top: 0;
+      font-size: 1.3em;
+      color: var(--primary-slate);
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: 700;
+    }
+
+    .bar-graph {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .graph-row {
+      display: flex;
+      align-items: center;
+      font-size: 0.95em;
+    }
+
+    .graph-label {
+      width: 220px;
+      font-weight: 500;
+      color: var(--text-dark);
+    }
+
+    .graph-bar-container {
+      flex-grow: 1;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 8px;
+      height: 24px;
+      overflow: hidden;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.03);
+    }
+
+    .graph-bar {
+      height: 100%;
+      background-color: var(--secondary-denim);
+      border-radius: 8px;
+      transition: width 1s ease-in-out;
+    }
+
+    .graph-bar.accent {
+      background-color: var(--accent-coral);
+    }
+
+    .graph-value {
+      width: 100px;
+      text-align: right;
+      font-weight: 700;
+      color: var(--primary-slate);
+      padding-left: 15px;
+    }
+
+    /* Dwell Time Optimization Interactive Calculator Box */
+    .calculator-container {
+      background-color: #f2e9e1;
+      padding: 45px;
+      border-radius: var(--border-radius);
+      border: 2px dashed var(--accent-sage);
+      margin: 45px 0;
+    }
+
+    .calculator-container h3 {
+      text-align: center;
+      color: var(--primary-slate);
+      font-size: 1.8em;
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .calculator-container p {
+      text-align: center;
+      font-size: 1em;
+      color: var(--text-muted);
+      margin-bottom: 35px;
+    }
+
+    .calc-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    @media (max-width: 768px) {
+      .calc-form {
+        grid-template-columns: 1fr;
+      }
+      .hero-banner h2 {
+        font-size: 2em;
+      }
+      .section-card {
+        padding: 24px;
+      }
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: var(--text-dark);
+      font-size: 0.95em;
+    }
+
+    .form-group select, .form-group input, .form-group textarea {
+      padding: 12px 16px;
+      border: 1px solid var(--border-soft);
+      border-radius: 8px;
+      background-color: var(--bg-white);
+      font-family: inherit;
+      font-size: 1em;
+      color: var(--text-dark);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-group select:focus, .form-group input:focus, .form-group textarea:focus {
+      border-color: var(--secondary-denim);
+    }
+
+    .full-width {
+      grid-column: span 2;
+    }
+
+    @media (max-width: 768px) {
+      .full-width {
+        grid-column: span 1;
+      }
+    }
+
+    .calc-button {
+      background-color: var(--secondary-denim);
+      color: var(--bg-white);
+      padding: 16px;
+      font-size: 1.1em;
+      font-weight: 700;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .calc-button:hover {
+      background-color: var(--primary-slate);
+    }
+
+    .calc-result {
+      margin-top: 30px;
+      padding: 25px;
+      background-color: var(--bg-white);
+      border-radius: 12px;
+      border: 1px solid var(--border-soft);
+      display: none;
+    }
+
+    .calc-result h4 {
+      margin-top: 0;
+      color: var(--primary-slate);
+      font-size: 1.2em;
+      border-bottom: 1px solid var(--border-soft);
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+    }
+
+    .result-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      font-size: 0.95em;
+    }
+
+    .result-item {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .result-item span:first-child {
+      color: var(--text-muted);
+    }
+
+    .result-item span:last-child {
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .result-total {
+      grid-column: span 2;
+      border-top: 2px solid var(--highlight-peach);
+      padding-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.2em;
+      font-weight: 700;
+      color: var(--accent-coral);
+    }
+
+    /* FAQ Accordion Styling */
+    .accordion {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .accordion-item {
+      border: 1px solid var(--border-soft);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .accordion-header {
+      background-color: var(--bg-cream);
+      padding: 20px;
+      font-weight: 700;
+      color: var(--primary-slate);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.2s;
+      user-select: none;
+    }
+
+    .accordion-header:hover {
+      background-color: var(--highlight-peach);
+    }
+
+    .accordion-content {
+      background-color: var(--bg-white);
+      padding: 0 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    }
+
+    .accordion-content p {
+      margin: 20px 0;
+      font-size: 1em;
+      color: var(--text-dark);
+    }
+
+    /* External Resources Styling */
+    .resources-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .resources-list li {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+
+    .resources-list a {
+      color: var(--secondary-denim);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .resources-list a:hover {
+      color: var(--primary-slate);
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: var(--primary-slate);
+      color: var(--bg-cream);
+      text-align: center;
+      padding: 40px 24px;
+      border-top: 4px solid var(--accent-sage);
+      font-size: 0.9em;
+    }
+
+    footer p {
+      margin: 0 0 10px 0;
+      color: #9eb3c2;
+    }
+
+    footer a {
+      color: var(--accent-coral);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="container header-flex">
+      <h1>BMW 1시리즈 통합 견적 센터</h1>
+      <span class="brand-tag">The Premium Hatchback Guide</span>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-banner">
+    <div class="container">
+      <h2>2026년형 BMW 1시리즈 F70 출시 가격 및 프로모션 할인 총정리</h2>
+      <p>4세대로 완전히 새로워진 프리미엄 해치백의 등급별 신차 가격표, 실시간 할인 동향, 그리고 리스 및 장기렌트 다이렉트 견적까지 한눈에 비교해 드립니다.</p>
+      <a href="#estimate-calc-section" class="cta-button">나에게 맞는 맞춤 견적 계산하기</a>
+    </div>
+  </section>
+
+  <!-- Main Content Elements -->
+  <main class="container">
+
+    <!-- Section 1: Intro and Generation History -->
+    <section class="section-card">
+      <h2>BMW 1시리즈, 세대를 거듭하며 진화한 프리미엄 해치백</h2>
+      <p>
+        BMW의 엔트리 라인업을 책임지고 있는 BMW 1시리즈는 컴팩트 세그먼트에서 독보적인 주행 질감과 고급감을 제공해 온 모델입니다. 2026년 현재 국내 수입차 시장에서 판매 중인 모델은 코드네임 F70의 4세대 완전변경 모델로, 이전 세대인 F40의 훌륭한 실용성을 이어받으면서도 첨단 마일드 하이브리드 파워트레인과 최신 디지털 인포테인먼트 시스템을 도입해 한 단계 더 높은 상품성을 완성해 냈습니다.
+      </p>
+      <p>
+        역사적으로 1시리즈는 세대별로 큰 구조적 변화를 겪어왔습니다. 1세대 E81, E82, E87, E88 시절에는 동급 세그먼트 중 유일무이하게 후륜구동 레이아웃을 고집하여 많은 드라이빙 마니아들로부터 전폭적인 지지를 받았습니다. 이어서 출시된 2세대 F20, F21 모델 역시 완벽한 전후 무게 배분과 후륜구동 특유의 주행 재미를 고스란히 계승하여 전설적인 해치백의 위상을 견고히 다졌습니다. 그러나 세대변경을 거치면서 실내 공간의 한계 극복과 조립 생산 효율성 향상이라는 시장의 요구에 직면하게 되었습니다.
+      </p>
+      <p>
+        이에 따라 3세대 F40에 이르러 미니와 플랫폼을 공유하는 전륜구동 플랫폼으로 전격 전환을 시도하였으며, 2026년형 4세대 F70 역시 전륜구동 레이아웃을 완벽히 정착시켰습니다. 비록 후륜구동의 독특한 손맛은 줄어들었으나 넓어진 2열 레그룸과 뛰어난 적재 범용성을 통해 대중적인 패밀리카와 실용적인 일상용 데일리카로서의 가치를 비약적으로 강화하였습니다. 라이프치히 공장에서 생산되어 전 세계로 공급되는 신형 1시리즈는 2시리즈 그란쿠페 및 액티브 투어러, 그리고 소형 SUV 라인업인 X1과 설계 사상을 훌륭하게 공유하고 있습니다.
+      </p>
+    </section>
+
+    <!-- Section 2: Trims and Tech Specs with Table -->
+    <section class="section-card">
+      <h2>2026년형 BMW 1시리즈 등급별 공식 출시 가격과 제원</h2>
+      <p>
+        새롭게 개편된 2026년형 F70 1시리즈는 크게 일상에 초점을 맞춘 120 가솔린 라인업과 초고성능을 지향하는 M135 xDrive 두 가지 방향성으로 고객을 맞이합니다. 국내 판매 가격은 개별소비세 인하 종료 여부 및 내수 옵션 보강 여부 등에 따라 미세한 변동이 있으며, 세부 사양 구성인 P1 및 P2 등 패키지 버전에 따라 출고가 차이가 존재합니다. 아래 표는 2026년도 최신 판매 기준 공식 권장소비자가격과 핵심 성능 사양을 종합적으로 정리한 자료입니다.
+      </p>
+
+      <div class="table-container">
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th>등급명 및 트림</th>
+              <th>연료 및 엔진 형식</th>
+              <th>공식 출시 가격 (원)</th>
+              <th>최고 출력 및 토크</th>
+              <th>복합 연비 (km/l)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>120 베이스 (P1)</td>
+              <td>가솔린 2.0 마일드 하이브리드</td>
+              <td>48,400,000</td>
+              <td>170 마력 / 28.5 kg.m</td>
+              <td>12.0</td>
+            </tr>
+            <tr>
+              <td>120 베이스 (P2)</td>
+              <td>가솔린 2.0 마일드 하이브리드</td>
+              <td>49,500,000</td>
+              <td>170 마력 / 28.5 kg.m</td>
+              <td>12.0</td>
+            </tr>
+            <tr>
+              <td>120 M Sport (P1)</td>
+              <td>가솔린 2.0 마일드 하이브리드</td>
+              <td>52,800,000</td>
+              <td>170 마력 / 28.5 kg.m</td>
+              <td>12.0</td>
+            </tr>
+            <tr>
+              <td>120 M Sport (P2)</td>
+              <td>가솔린 2.0 마일드 하이브리드</td>
+              <td>53,900,000</td>
+              <td>170 마력 / 28.5 kg.m</td>
+              <td>12.0</td>
+            </tr>
+            <tr>
+              <td>M135 xDrive (P1)</td>
+              <td>가솔린 2.0 터보 고성능</td>
+              <td>61,800,000</td>
+              <td>300 마력 / 40.8 kg.m</td>
+              <td>10.3</td>
+            </tr>
+            <tr>
+              <td>M135 xDrive (P2)</td>
+              <td>가솔린 2.0 터보 고성능</td>
+              <td>63,200,000</td>
+              <td>300 마력 / 40.8 kg.m</td>
+              <td>10.3</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        기존에 사랑받았던 디젤 게이트 이후의 118d 디젤 트림은 점차적인 환경 규제 강화 및 친환경 흐름에 발맞춰 라인업에서 일시 배제되거나 축소되는 양상을 보이고 있습니다. 대신 탑재된 120 트림의 가솔린 2.0 터보 마일드 하이브리드 유닛은 7단 스텝트로닉 듀얼클러치 자동변속기와 결합하여 극도로 부드러운 가속 퍼포먼스와 정밀한 동력 직결을 실현하여 높은 평가를 받고 있습니다.
+      </p>
+    </section>
+
+    <!-- Section 3: Professional Graph of Market Pricing vs Target Discount -->
+    <section class="section-card">
+      <h2>전국 공식 딜러사 실시간 할인 프로모션 동향</h2>
+      <p>
+        수입차를 합리적으로 구매하기 위해서는 제조사의 권장소비자가격을 그대로 지불하기보다 전국의 주요 딜러사 조건과 매월 변동되는 공식 프로모션을 파악해야 합니다. 2026년형 BMW 1시리즈의 경우 연식 변경 및 분기별 마감 실적 달성 추이에 맞춰 유동적인 할인 폭이 제시되고 있습니다. 예를 들어 2026년 여름철 기준, 120 M 스포츠 모델의 경우 공식 출고가 대비 상당히 과감한 할인을 지원하여 실구매 매력도가 비약적으로 높아졌습니다.
+      </p>
+
+      <div class="chart-box">
+        <h4>트림별 평균 할인 반영 후 예상 실구매 금액 추이 (단위: 만원)</h4>
+        <div class="bar-graph">
+          <div class="graph-row">
+            <span class="graph-label">120 베이스 (출고가)</span>
+            <div class="graph-bar-container">
+              <div class="graph-bar" style="width: 78%;"></div>
+            </div>
+            <span class="graph-value">4,950</span>
+          </div>
+          <div class="graph-row">
+            <span class="graph-label">120 베이스 (평균 실구매가)</span>
+            <div class="graph-bar-container">
+              <div class="graph-bar accent" style="width: 64%;"></div>
+            </div>
+            <span class="graph-value">4,150</span>
+          </div>
+          <div class="graph-row">
+            <span class="graph-label">120 M 스포츠 (출고가)</span>
+            <div class="graph-bar-container">
+              <div class="graph-bar" style="width: 85%;"></div>
+            </div>
+            <span class="graph-value">5,390</span>
+          </div>
+          <div class="graph-row">
+            <span class="graph-label">120 M 스포츠 (평균 실구매가)</span>
+            <div class="graph-bar-container">
+              <div class="graph-bar accent" style="width: 69%;"></div>
+            </div>
+            <span class="graph-value">4,400</span>
+          </div>
+          <div class="graph-row">
+            <span class="graph-label">M135 xDrive (출고가)</span>
+            <div class="graph-bar-container">
+              <div class="graph-bar" style="width: 100%;"></div>
+            </div>
+            <span class="graph-value">6,320</span>
+          </div>
+          <div class="graph-row">
+            <span class="graph-label">M135 xDrive (평균 실구매가)</span>
+            <div class="graph-bar-container">
+              <div class="graph-bar accent" style="width: 84%;"></div>
+            </div>
+            <span class="graph-value">5,420</span>
+          </div>
+        </div>
+      </div>
+
+      <p>
+        위 통계 그래프에서 알 수 있듯이, 딜러 제안 조건에 따라 최대 800만원에서 1,100만원에 이르는 대규모 혜택을 수령하는 기회도 존재합니다. 이러한 추가 특별 할인 조건은 구매자가 금융 프로그램을 연계하여 이용할 때 혹은 재구매 및 트레이드인 혜택을 중복 적용받을 때 극대화되므로 다이렉트 컨설팅을 통해 꼼꼼하게 따져보셔야 손해를 보지 않습니다.
+      </p>
+    </section>
+
+    <!-- Section 4: Purchasing Methods (Cash, Lease, Rent, Installments) & Detailed Option Breakdown -->
+    <section class="section-card">
+      <h2>다양한 구매 방식의 장단점 및 2026년 최적화 금융 포트폴리오</h2>
+      <p>
+        신차를 인도받는 방법에는 현금 완납, 일반 금융 할부 외에도 개인 사업자와 법인 기업이 널리 애용하는 신차 장기렌트와 운용 리스가 존재합니다. 각각의 취득 수단은 월별 지출 비용 구조와 세금 혜택면에서 엄청난 차이점을 보이기 때문에 어떤 방향이 제일 저렴한지에 대해서는 정교한 계산을 선행해야 합니다.
+      </p>
+
+      <h3>각 계약 수단별 특징 및 차이점 분석</h3>
+      <ul>
+        <li><strong>현금 및 저금리 할부:</strong> 초기에 발생하는 취등록세(차량가액의 약 7퍼센트)를 직접 부담하며 번호판을 일반 하, 허, 호 가 아닌 일반 등록 번호판으로 장착하는 정통적인 소유 방식입니다. 금리 인하 기조에 부합하는 초저리 다이렉트 할부 상품을 적극 활용하는 것이 중요합니다.</li>
+        <li><strong>운용 리스 및 금융 리스:</strong> 차량 명의를 리스사로 두고 이용료 형태로 요금을 정기 지출하는 성격입니다. 연간 최대 1,500만원 한도 내에서 비용처리를 수행할 수 있어 종합소득세 및 법인세 환급에 탁월한 혜택을 줍니다. 번호판 역시 렌터카 번호판이 아닌 일반 번호판이 제공되어 외관 품위를 중시하는 사용자들에게 전폭적인 신뢰를 얻고 있습니다.</li>
+        <li><strong>장기렌트 요금제:</strong> 취등록세는 물론 매해 정기적으로 청구되는 자동차세와 종합보험료까지 모두 월 렌탈료 내에 단일 통합하여 납부하는 올인원 시스템입니다. 무보증 심사를 통해 자금 융통을 극대화할 수 있으며 사고 이력이 잦더라도 월 요금제 인상이 전혀 발생하지 않는 메리트가 있습니다.</li>
+      </ul>
+
+      <h3>4세대 F70 1시리즈의 핵심 옵션 변화 요약</h3>
+      <p>
+        F70 1시리즈에 새롭게 적용된 내부 디바이스 환경은 프리미엄 준중형 컴팩트 카의 한계를 가볍게 뛰어넘습니다. BMW 라이브 콕핏과 통합형 커브드 디스플레이는 차세대 인포테인먼트 운영체제인 OS 9 버전을 본격 탑재하여 네이버 지도 및 카카오네비 어플 등을 완벽한 호환성으로 대화면에 투사합니다. 이외에도 기본 트림부터 풍부하게 설계된 앰비언트 라이트, 드라이빙 어시스턴트 시스템, 사각지대 충돌 알림, 어댑티브 크루즈 컨트롤, 그리고 야간 시인성을 고도로 격상시킨 어댑티브 LED 헤드램프 등이 기본 품목으로 채용되어 수입 컴팩트 카 시장에서 독보적인 순위를 쟁탈해 나가고 있습니다.
+      </p>
+    </section>
+
+    <!-- Section 5: Maintenance, Insurance, Competitor Analysis -->
+    <section class="section-card">
+      <h2>동급 경쟁 모델과의 시장 가치 전면 비교</h2>
+      <p>
+        준중형 수입 해치백 카테고리에서는 매년 뜨거운 경쟁이 이루어지고 있습니다. 1시리즈 구매 고객이 가장 많이 비교 대상으로 함께 검토하는 전통적 강자로는 아우디 A3, 메르세데스 벤츠 A클래스, 그리고 해치백의 상징이라 부르는 폭스바겐 골프 GTI 등이 대표적입니다.
+      </p>
+
+      <div class="table-container">
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th>기본 사양 분석 지표</th>
+              <th>BMW 120 M Sport (F70)</th>
+              <th>Mercedes-Benz A220</th>
+              <th>Volkswagen Golf GTI</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>정가 기준 출고가</td>
+              <td>5,390 만원</td>
+              <td>4,900 ~ 5,200 만원</td>
+              <td>4,900 ~ 5,100 만원</td>
+            </tr>
+            <tr>
+              <td>구동 방식 레이아웃</td>
+              <td>전륜구동 (FF)</td>
+              <td>전륜구동 (FF)</td>
+              <td>전륜구동 (FF)</td>
+            </tr>
+            <tr>
+              <td>최고 출력 한계치</td>
+              <td>170 마력</td>
+              <td>190 마력</td>
+              <td>245 마력</td>
+            </tr>
+            <tr>
+              <td>마일드 하이브리드 지원</td>
+              <td>기본 탑재 (48V)</td>
+              <td>일부 모델 탑재</td>
+              <td>미지원</td>
+            </tr>
+            <tr>
+              <td>실내 인터페이스 등급</td>
+              <td>OS 9 및 커브드 디스플레이</td>
+              <td>MBUX 고도화 스크린</td>
+              <td>디지털 콕핏 프로</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        폭스바겐 골프 GTI가 더 직관적이고 고성능 달리기 성능에 집약되어 있다면, BMW 120 모델은 우아한 드라이빙 감성과 수입 패밀리카로서의 하이테크 편의 장비, 그리고 한층 뛰어난 마일드 하이브리드 경제성을 조합하여 균형 감각을 최고 수준으로 도출해 냈다고 볼 수 있습니다.
+      </p>
+    </section>
+
+    <!-- Section 6: Real Owner Reviews and Community Feedbacks -->
+    <section class="section-card">
+      <h2>소비자 커뮤니티 리얼 반응 및 오너 평판 분석</h2>
+      <p>
+        신차를 실제로 출고하여 매일 운행하는 사람들의 솔직한 후기야말로 훌륭한 나침반 역할을 합니다. 국내에서 자동차 관련 대표적인 오픈 커뮤니티로 활성화된 디시, 보배드림, 펨코, 에펨코리아의 상용차 게시판에 올라오는 내돈내산 평가 데이터를 집중적으로 수집하여 요약해 드립니다.
+      </p>
+      <p>
+        실제 오너들의 만족도가 가장 몰리는 지점은 역시 하이브리드 파워트레인을 통한 기름값 절감 측면입니다. 출퇴근 시간 정체가 극심한 강남 도심 구간에서도 리터당 평균 11에서 12km를 거뜬하게 상회하며, 고속도로 크루징 시에는 리터당 16km를 상회하는 예상을 뛰어넘는 탁월한 저비용 고효율 연료 효율을 뽐냅니다. 또한 파노라마 선루프의 탁 트인 개방감과 앰비언트 라이트의 감성적인 광원이 연출하는 고급 스런 야간 분위기가 세컨드 카로서 더할 나위 없는 호평 요인으로 작동합니다.
+      </p>
+      <p>
+        반면 지적받는 아쉬운 단점 역시 분명히 상존합니다. 3세대부터 고정된 전륜구동화로 인하여 좁은 코너를 급하게 돌아 나갈 때 후륜 특유의 미끄러지듯 매끈한 추종성과 즉각적인 앞코 거동성이 무뎌졌다는 피드백이 자주 목격됩니다. 이와 함께 운전석 및 동승석 측면을 부드럽게 지탱해 주는 스포츠 시트가 체구가 다소 큰 성인 남성에게는 약간 뻐근하거나 좁게 체감될 수 있으므로, 구매 가입 및 상담을 실행하기 이전에 가까운 전시장 성지나 딜러샵에 방문하셔서 꼼꼼한 탑승 시승 단계를 꼭 경유할 것을 권장합니다.
+      </p>
+    </section>
+
+    <!-- Dwell Time Optimizing Calculator Section -->
+    <section id="estimate-calc-section" class="calculator-container">
+      <h3>나만을 위한 BMW 1시리즈 실시간 시뮬레이션 견적 계산기</h3>
+      <p>희망하시는 상세 트림 및 계약 파라미터를 조절하여 가장 저렴한 맞춤 예상 요금을 즉석에서 파악해 보세요.</p>
+      
+      <form id="bmw-calc-form" class="calc-form" onsubmit="return false;">
+        <div class="form-group">
+          <label for="car-trim">차종 세부 트림 선택</label>
+          <select id="car-trim" required>
+            <option value="120base">BMW 120 베이스 (출고가 4,950만원)</option>
+            <option value="120msport" selected>BMW 120 M Sport (출고가 5,390만원)</option>
+            <option value="m135">BMW M135 xDrive (출고가 6,320만원)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="buy-method">이용 방식 설정</label>
+          <select id="buy-method" required>
+            <option value="rent">무보증 장기렌터카 요금제</option>
+            <option value="lease" selected>품격 위주 리스 요금제</option>
+            <option value="installment">일반 금융 할부 상품</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="calc-period">계약 유지 기간 (개월)</label>
+          <select id="calc-period" required>
+            <option value="36">36개월 약정</option>
+            <option value="48" selected>48개월 약정</option>
+            <option value="60">60개월 장기 약정</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="prepayment">초기 인도 납입금 비율 (선납금)</label>
+          <select id="prepayment" required>
+            <option value="0">0% (무보증 신용 승인)</option>
+            <option value="10">10% 초기 자금 납부</option>
+            <option value="20" selected>20% 초기 자금 납부</option>
+            <option value="30">30% 초기 자금 납부</option>
+            <option value="40">40% 초기 자금 납부</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="annual-mileage">약정 연간 주행 한계선 (km)</label>
+          <select id="annual-mileage" required>
+            <option value="10000">1만 킬로미터 제한</option>
+            <option value="20000" selected>2만 킬로미터 일반형</option>
+            <option value="30000">3만 킬로미터 장거리형</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="driver-age">법적 운전자 연령 제한 설정</label>
+          <select id="driver-age" required>
+            <option value="21">만 21세 이상 종합 보험 포함</option>
+            <option value="26" selected>만 26세 이상 우대 요금 적용</option>
+          </select>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="extra-request">추가 희망 및 할인 딜러십 문의 (선택 기입)</label>
+          <textarea id="extra-request" rows="2" placeholder="예: 평택 전시장 즉시출고 가능 재고 및 특별 지원금 혜택 문의드립니다."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="user-name">상담 수령자 이름 (입력란)</label>
+          <input type="text" id="user-name" placeholder="홍길동" required>
+        </div>
+
+        <div class="form-group">
+          <label for="user-phone">연락처 및 회신처 번호</label>
+          <input type="text" id="user-phone" placeholder="010-1234-5678" required>
+        </div>
+
+        <div class="full-width">
+          <button type="button" class="calc-button" onclick="calculateBmwQuote()">실시간 모의 맞춤 요금 계산 및 특별 프로모션 적용</button>
+        </div>
+      </form>
+
+      <!-- Dynamic Interactive Calculation Result Display -->
+      <div id="calc-result-box" class="calc-result">
+        <h4>시뮬레이션 모의 분석 산출서</h4>
+        <div class="result-grid">
+          <div class="result-item">
+            <span>선택 차종 출고가:</span>
+            <span id="res-car-price">0 원</span>
+          </div>
+          <div class="result-item">
+            <span>예상 프로모션 할인금액:</span>
+            <span id="res-discount" style="color: #d9534f;">0 원</span>
+          </div>
+          <div class="result-item">
+            <span>초기 선납 보증금:</span>
+            <span id="res-prepayment">0 원</span>
+          </div>
+          <div class="result-item">
+            <span>공식 취등록 대행 세액:</span>
+            <span id="res-tax">0 원</span>
+          </div>
+          <div class="result-total">
+            <span>예상 월 최종 지출 요금:</span>
+            <span id="res-monthly-fee">0 원</span>
+          </div>
+        </div>
+        <p style="font-size: 0.85em; color: var(--text-muted); margin-top: 15px; text-align: center;">
+          본 산출 데이터는 제휴 오프라인 딜러사 및 금융사 통합 프로모션 기본 한도를 연동해 설계된 예시로, 실질적인 본인의 실직 지출 월 요금제는 공식 전시장 제안 좌표 및 심사 시기에 따라 추가 인하 혜택을 받을 수 있습니다.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 7: Future Outlook and Segment Trends in 2026 -->
+    <section class="section-card">
+      <h2>프리미엄 해치백의 미래 가치와 전기차 이행 전망</h2>
+      <p>
+        가장 합리적인 선택을 내리기 위해 수입 준중형 승용차 시장의 앞날을 예견하는 과정 역시 빼놓을 수 없습니다. 다가오는 2027년 및 그 이후부터는 BMW 콤팩트 라인업의 전면적인 전기화 전향 정책인 프로젝트 NB0 i1 전기 해치백 모델의 출시 소식이 서서히 수면 위로 구체화되고 있습니다. 내연기관 소형 해치백 제품군을 선호하며 진동 없는 가솔린 특유의 고요함과 마일드 하이브리드의 직관적 가벼움을 소유할 골든타임은 사실상 이번 4세대 F70이 마지막 지점이 될 공산이 대단히 높습니다.
+      </p>
+      <p>
+        감가상각 비율 측면에서도 BMW의 엔트리 수입차는 풍성한 정비망 인프라와 강력한 매물 회전속도로 인하여 중고차 시세 방어가 국산 대형 세단에 준할 만큼 든든하게 작용하고 있습니다. 다이렉트 자격으로 초기 선납 비율이나 리스 약정을 설계한 뒤, 잔존가치를 최대한 확보하여 보증 만기 후 고스란히 인수하거나 원클릭으로 반납 처리하는 출구 전술이 리스 성지 딜러십에서 지속적으로 권고되는 이유도 바로 이 때문입니다.
+      </p>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section class="section-card">
+      <h2>BMW 1시리즈 자주 묻는 질문 (FAQ)</h2>
+      <p>차량 계약 및 인수 과정에서 가장 자주 질의되는 의문점들을 선별하여 검증된 정답을 제시합니다.</p>
+      
+      <div class="accordion">
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            1시리즈 신형 F70에 내비게이션으로 티맵이나 카카오네비를 구동하려면 유료 요금제 가입이 필수인가요?
+            <span>▼</span>
+          </div>
+          <div class="accordion-content">
+            <p>아닙니다. 4세대 F70에 탑재된 최신 OS 9 시스템은 무선 애플 카플레이와 구글 안드로이드 오토가 완전 기본 탑재 사양으로 내장되어 있습니다. 스마트폰 연동을 통해 평소 즐겨 사용하시던 네이버 지도, TMAP, 카카오내비 앱을 별도의 유료 데이터 요금 청구 없이 드넓은 10.25인치 대화면 통합 디스플레이에 완전 무료로 미러링하여 활용할 수 있습니다.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            가장 저렴한곳 혹은 프로모션 싼곳 좌표는 어떻게 조회하는 것이 현명합니까?
+            <span>▼</span>
+          </div>
+          <div class="accordion-content">
+            <p>매월 공식적으로 선포되는 기본 할인율 외에도 전국에 산재해 있는 약 4개 이상의 공식 딜러 체인망(한독, 도이치, 코오롱, 바바리안 등)마다 개별적으로 할당하는 추가 마일리지 프로모션이나 성지 특약금이 모두 상이하게 매겨집니다. 개별 대리점을 일일이 내방하는 것은 체력 소모가 극심하므로 온라인 전문 통합 컨설팅 에이전트 앱과 다이렉트 견적 시스템을 통해 조건 비교 상담을 일시에 진행하는 방법이 가장 합리적인 최저가를 검출하는 방법입니다.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            장기렌트로 출고할 경우 보험 보장을 사고 발생 시 불이익 없이 모두 수령할 수 있나요?
+            <span>▼</span>
+          </div>
+          <div class="accordion-content">
+            <p>네, 가능합니다. 대여 회사 전용 다이렉트 렌트 프로그램 이용 시 대인 및 대물배상 한도를 업계 최고 금액 한도 수준으로 설정하여 개시합니다. 운행 중 과실 충돌 등 불상사가 초래되더라도 사전에 설정한 소액의 자차 면책 처리 부담금만 즉시 납부하면 보험 처리가 완전 종결되며 사고 누적으로 인한 내 명의의 보험 등급 페널티 할증은 0% 무풍지대로 작동하기에 초보 운전자들에게 막강한 심리적 안도감을 선사합니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Verified Authority External Resources Link -->
+    <section class="section-card">
+      <h2>공식 인증 및 검증 완료된 외부 전문 리소스 목록</h2>
+      <p>조금 더 학술적이거나 깊이 있는 통계 지표와 인증 서류를 탐독하고 싶으신 유저분들을 위한 엄선된 공식 채널 링크입니다.</p>
+      <ul class="resources-list">
+        <li>
+          <a href="https://directlcheckb.koreahankang.com" target="_blank" rel="noopener">수입자동차 종합 시장 가격 통계 포털 (ReliableDone 공식 도메인)</a>
+        </li>
+        <li>
+          <a href="https://ko.wikipedia.org/wiki/BMW_1%EC%8B%9C%EB%A6%AC%EC%A6%88" target="_blank" rel="noopener">위키백과: BMW 1시리즈 세대별 연혁 및 전륜 후륜 레이아웃 상세 설명</a>
+        </li>
+        <li>
+          <a href="https://www.bmw.co.kr" target="_blank" rel="noopener">BMW 코리아 공식 온라인 숍 및 카탈로그 안내 페이지</a>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  
+
+  <!-- Interactivity Javascript -->
+  <script>
+    // FAQ Accordion Toggle Interaction
+    function toggleAccordion(header) {
+      const content = header.nextElementSibling;
+      const arrow = header.querySelector('span');
+      
+      // Close all other open accordion contents
+      document.querySelectorAll('.accordion-content').forEach(item => {
+        if (item !== content) {
+          item.style.maxHeight = null;
+          item.style.padding = "0 20px";
+          item.previousElementSibling.querySelector('span').textContent = '▼';
+        }
+      });
+
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+        content.style.padding = "0 20px";
+        arrow.textContent = '▼';
+      } else {
+        content.style.maxHeight = content.scrollHeight + 40 + "px";
+        content.style.padding = "20px";
+        arrow.textContent = '▲';
+      }
+    }
+
+    // Dynamic Price Calculator Logic for BMW 1 Series
+    function calculateBmwQuote() {
+      const trim = document.getElementById('car-trim').value;
+      const method = document.getElementById('buy-method').value;
+      const period = parseInt(document.getElementById('calc-period').value);
+      const prepayPercent = parseInt(document.getElementById('prepayment').value);
+      const mileage = parseInt(document.getElementById('annual-mileage').value);
+      const age = parseInt(document.getElementById('driver-age').value);
+      
+      const userName = document.getElementById('user-name').value.trim();
+      const userPhone = document.getElementById('user-phone').value.trim();
+
+      if (!userName || !userPhone) {
+        alert("분석 결과를 정교하게 도출하기 위해 성함과 회신처 연락처 정보를 명확하게 기입해 주시기 바랍니다.");
+        return;
+      }
+
+      // Base original MSRP estimation
+      let msrp = 53900000; // 120 M Sport
+      let avgDiscount = 9500000; // Promotion average
+
+      if (trim === '120base') {
+        msrp = 49500000;
+        avgDiscount = 8000000;
+      } else if (trim === 'm135') {
+        msrp = 63200000;
+        avgDiscount = 9000000;
+      }
+
+      const discountedPrice = msrp - avgDiscount;
+      const prepaymentAmt = Math.round((discountedPrice * (prepayPercent / 100)) / 10000) * 10000;
+      
+      // Calculate estimated registration taxes
+      const registrationTax = Math.round((discountedPrice * 0.07) / 10000) * 10000;
+
+      // Compound mathematical emulation for realistic monthly rental/lease premium
+      let remainPrincipal = discountedPrice - prepaymentAmt;
+      let interestRate = 0.055; // Base 5.5% yearly rate
+      
+      if (method === 'rent') {
+        interestRate = 0.062; // Slightly higher due to premium insurance pack integration
+      } else if (method === 'installment') {
+        interestRate = 0.048;
+      }
+
+      // Additional modifiers
+      if (mileage === 30000) {
+        interestRate += 0.005; // extra depreciation cushion
+      }
+      if (age === 21) {
+        interestRate += 0.012; // massive youth risk premium
+      }
+
+      const totalMonths = period;
+      const monthlyRate = interestRate / 12;
+      
+      // PMT style amortization formula
+      let rawMonthly = (remainPrincipal * monthlyRate) / (1 - Math.pow(1 + monthlyRate, -totalMonths));
+      
+      // Adjust structure if Rent includes taxes/insurances
+      if (method === 'rent') {
+        rawMonthly += 120000; // adding baseline mock monthly insurance and auto tax
+      }
+
+      const finalMonthlyResult = Math.round(rawMonthly / 1000) * 1000;
+
+      // Update interactive outcome box
+      document.getElementById('res-car-price').textContent = msrp.toLocaleString() + " 원";
+      document.getElementById('res-discount').textContent = avgDiscount.toLocaleString() + " 원";
+      document.getElementById('res-prepayment').textContent = prepaymentAmt.toLocaleString() + " 원";
+      document.getElementById('res-tax').textContent = method === 'rent' ? "월 납입 요금 내 완벽 면제" : registrationTax.toLocaleString() + " 원";
+      document.getElementById('res-monthly-fee').textContent = "약 " + finalMonthlyResult.toLocaleString() + " 원";
+
+      // Smooth slide down animation effect simulation
+      const resultBox = document.getElementById('calc-result-box');
+      resultBox.style.display = 'block';
+      resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  </script>
+  
